@@ -11,8 +11,8 @@ import { nullFunction, NULL_SUBSCRIPTION } from '../../nullObjects';
 
 const styles = StyleSheet.create({
   margin: {
-    marginTop: 4,
-    marginBottom: 4,
+    // marginTop: 4,
+    // marginBottom: 4,
   },
 });
 
