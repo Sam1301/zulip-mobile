@@ -75,6 +75,7 @@ public class AnchorScrollView extends ScrollView implements ReactClippingViewGro
     
     private String mAnchorTag;
     private int mLastAnchorY;
+    private ArrayList<String> mLastVisibleIds;
 
     public AnchorScrollView(ReactContext context) {
         this(context, null);
@@ -418,7 +419,17 @@ public class AnchorScrollView extends ScrollView implements ReactClippingViewGro
 //      Dispatch event after scrollview is drawn.
 //      Without this, as onScrollChanged() is called before a view draws,
 //      we'd miss to calculate visible ids currently on screen.
-        AnchorScrollViewHelper.emitScrollEvent(this, getVisibleIds());
+        ArrayList<String> currentVisibleIds = getVisibleIds();
+        if (mLastVisibleIds == null) {
+            AnchorScrollViewHelper.emitScrollEvent(this, currentVisibleIds);
+        } else {
+            currentVisibleIds.removeAll(mLastVisibleIds);
+            if (currentVisibleIds.isEmpty()) {
+                return;
+            }
+            AnchorScrollViewHelper.emitScrollEvent(this, currentVisibleIds);
+        }
+        mLastVisibleIds = currentVisibleIds;
     }
 
     public void setEndFillColor(int color) {
