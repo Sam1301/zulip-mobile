@@ -48,7 +48,6 @@
 		CF1953241E5BE67D00B14FF0 /* AnchorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1953231E5BE67D00B14FF0 /* AnchorScrollView.m */; };
 		CF1953261E5BF2E000B14FF0 /* AnchorScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1953251E5BF2E000B14FF0 /* AnchorScrollViewManager.m */; };
 		CF19532E1E5C062B00B14FF0 /* TaggedViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF19532D1E5C062B00B14FF0 /* TaggedViewManager.m */; };
-		CF6CFE2D1E7DC55100F687C7 /* Build-Phases in Resources */ = {isa = PBXBuildFile; fileRef = CF6CFE2C1E7DC55100F687C7 /* Build-Phases */; };
 		CFA67D201EC23BCB0070048E /* UtilManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA67D1F1EC23BCB0070048E /* UtilManager.m */; };
 		CFCFE5491F00158500C295CF /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A155BFEC1DD8E54100A8B695 /* libRCTCameraRoll.a */; };
 		D6D40984ED07473499B3F0C9 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5664A74FA8048439CBAB734 /* libRNDeviceInfo.a */; };
@@ -231,6 +230,34 @@
 			proxyType = 2;
 			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
 			remoteInfo = RNDeviceInfo;
+		};
+		CF5DD93C1F24EC95009EA654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		CF5DD93E1F24EC95009EA654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		CF5DD9401F24EC95009EA654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		CF5DD9421F24EC95009EA654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
 		};
 		CF68BE0D1E2CD177001D50C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -553,6 +580,10 @@
 				CF68BE291E2CD177001D50C6 /* libcxxreact.a */,
 				CF68BE2B1E2CD177001D50C6 /* libjschelpers.a */,
 				CF68BE2D1E2CD177001D50C6 /* libjschelpers.a */,
+				CF5DD93D1F24EC95009EA654 /* libthird-party.a */,
+				CF5DD93F1F24EC95009EA654 /* libthird-party.a */,
+				CF5DD9411F24EC95009EA654 /* libdouble-conversion.a */,
+				CF5DD9431F24EC95009EA654 /* libdouble-conversion.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -664,7 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				A14EA85B1EACE4CF009D9E83 /* libRCTAnimation.a */,
-				A14EA85D1EACE4CF009D9E83 /* libRCTAnimation-tvOS.a */,
+				A14EA85D1EACE4CF009D9E83 /* libRCTAnimation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -778,10 +809,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = D47VARCYH7;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 66KHCWMEYB;
+						DevelopmentTeam = D47VARCYH7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1012,10 +1044,10 @@
 			remoteRef = A14EA85A1EACE4CF009D9E83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A14EA85D1EACE4CF009D9E83 /* libRCTAnimation-tvOS.a */ = {
+		A14EA85D1EACE4CF009D9E83 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libRCTAnimation-tvOS.a";
+			path = libRCTAnimation.a;
 			remoteRef = A14EA85C1EACE4CF009D9E83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1066,6 +1098,34 @@
 			fileType = archive.ar;
 			path = libRNDeviceInfo.a;
 			remoteRef = A1F9F7561E1BE26300A70FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF5DD93D1F24EC95009EA654 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = CF5DD93C1F24EC95009EA654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF5DD93F1F24EC95009EA654 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = CF5DD93E1F24EC95009EA654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF5DD9411F24EC95009EA654 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = CF5DD9401F24EC95009EA654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF5DD9431F24EC95009EA654 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = CF5DD9421F24EC95009EA654 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CF68BE0E1E2CD177001D50C6 /* libRCTLinking-tvOS.a */ = {
@@ -1169,7 +1229,6 @@
 				17449DB932594E96A837970F /* MaterialIcons.ttf in Resources */,
 				48D1FC73615948D79D3BD31E /* Octicons.ttf in Resources */,
 				A148FEFC1E9D8CB900479280 /* zulip.mp3 in Resources */,
-				CF6CFE2D1E7DC55100F687C7 /* Build-Phases in Resources */,
 				3556F3DAC2424EBE9ABF0A31 /* Zocial.ttf in Resources */,
 				C478B42A63D649EFA2CFD12D /* SimpleLineIcons.ttf in Resources */,
 				DBC5C3186FE64F94BD3CDC19 /* MaterialCommunityIcons.ttf in Resources */,
@@ -1274,6 +1333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D47VARCYH7;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1321,6 +1381,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = D47VARCYH7;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1366,7 +1427,7 @@
 				CODE_SIGN_ENTITLEMENTS = ZulipMobile/ZulipMobile.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 66KHCWMEYB;
+				DEVELOPMENT_TEAM = D47VARCYH7;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1390,7 +1451,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.zulip.Zulip;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyaZulipMobile;
 				PRODUCT_NAME = ZulipMobile;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1403,7 +1464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ZulipMobile/ZulipMobile.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 66KHCWMEYB;
+				DEVELOPMENT_TEAM = D47VARCYH7;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1427,7 +1488,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.zulip.Zulip;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyaZulipMobile;
 				PRODUCT_NAME = ZulipMobile;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
